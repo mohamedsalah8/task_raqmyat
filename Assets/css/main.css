@@ -1,0 +1,757 @@
+@import url(../css/bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css);
+@import url(../css/owl.carousel.min.css);
+@import url(../css/owl.theme.default.min.css);
+
+@font-face {
+    font-family: 'Gotham';
+    src: url(../fonts/Gotham-Font/Gotham-Light.otf);
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url(../fonts/Gotham-Font/Gotham-Bold.otf);
+}
+
+@font-face {
+    font-family: 'GothamBlak';
+    src: url(../fonts/Gotham-Font/Gotham-Black.otf);
+}
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gotham';
+
+    -webkit-font-smoothing: antialiased;
+    /* This needs to be set or some font faced fonts look bold on Mac in Chrome/Webkit based browsers. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Fixes font bold issue in Firefox version 25+ on Mac */
+}
+
+
+img {
+    width: 100%;
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #0093DE !important;
+}
+
+.btn-static {
+    color: #FFFFFF !important;
+    font: normal normal normal 19px/20px Gotham;
+    padding: 15px 24px;
+    background: transparent linear-gradient(252deg,
+            #0093DE 0%, #3C6FAE 88%, #EF0220 150%) 0% 0% no-repeat padding-box;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-static span {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1640px;
+}
+
+.container-md {
+    max-width: 1120px;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #000;
+    font: normal normal bold 45px/50px GothamBlak;
+    letter-spacing: -2.02px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+h2 span {
+    background: transparent url('../img/lines/Line1.png') 100% 100% no-repeat padding-box;
+    z-index: -1;
+}
+
+/*-----------------------------------------------------------------------------------
+header section
+-----------------------------------------------------------------------------------*/
+.header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 14px 0;
+    position: relative;
+}
+
+.slider-header {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+
+.header ul {
+    list-style: none;
+}
+
+.header ul li {
+    display: inline-block;
+    vertical-align: middle;
+    /* padding-right: 35px; */
+}
+
+.header ul li:first-child {
+    padding-left: 0;
+}
+
+.header ul li a {
+    display: block;
+    font-size: 19px;
+    color: #656565;
+    transition: all ease 0.5s;
+    letter-spacing: -1px;
+    font: normal normal 300 19px/20px Gotham;
+}
+
+.header ul li a:hover,
+.header ul li.active a {
+    color: #027AB7;
+}
+
+.header ul li.active a {
+    font-family: GothamBold;
+    font-weight: 400;
+    position: relative;
+}
+
+.header ul li.active a::after {
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: #EF0220;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    left: 16px;
+}
+
+.header ul .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #027AB7;
+    display: inline-block;
+    margin: 0 21px;
+}
+
+.logo {
+    /* position: relative;
+    left: -10%; */
+    width: 30%;
+}
+
+.logo a img {
+    max-width: 120px;
+
+}
+
+/*-----------------------------------------------------------------------------------
+
+mobile-menu css
+
+-----------------------------------------------------------------------------------*/
+.mobile-ic {
+    background: #027AB7;
+    cursor: pointer;
+    padding: 14px 10px;
+    /* position: absolute;
+	right: 0;
+	top: 35px; */
+    border-radius: 4px;
+    z-index: 9;
+    display: none;
+}
+
+.mobile-ic span {
+    background: #ffffff;
+    display: block;
+    height: 2px;
+    margin-top: 7px;
+    width: 30px;
+}
+
+.mobile-ic span:first-child {
+    margin-top: 0;
+}
+
+.responsive-menu {
+    position: absolute;
+    top: 173px;
+    display: none;
+    background: #027AB7;
+    padding: 15px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header .responsive-menu ul li {
+    border-top: 1px solid rgba(46, 42, 38, 0.35);
+    display: block;
+    margin-top: 7px;
+    padding-left: 0;
+    padding-top: 7px;
+}
+
+.header .responsive-menu ul li a:hover,
+.header .responsive-menu ul li.active a {
+    color: #2e2a26;
+}
+
+.header .responsive-menu ul li:first-child {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/*-----------------------------------------------------------------------------------
+
+Home CSS
+
+-----------------------------------------------------------------------------------*/
+main {
+    position: relative;
+    overflow-x: hidden;
+
+}
+
+main::after {
+    content: "";
+    background-image: url('../img/heroBg.png');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(30px);
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.home {
+    background: transparent url('../img/(lines).png') 50% -150% no-repeat padding-box;
+}
+
+.home .text_home h1 {
+    color: #000;
+    font: normal normal 900 75px/83px GothamBlak;
+    letter-spacing: 0px;
+}
+
+.home .text_home h1 .fintech {
+    color: #0093DE;
+    background-image: url(../img/circle\ note.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.home .text_home h1 .revenues {
+    color: #0093DE;
+    padding: 20px 0;
+    background: transparent url('../img/line.png') 100% -25% no-repeat padding-box;
+}
+
+.home .text_home p {
+    font: normal normal normal 18px/25px Gotham;
+    letter-spacing: 0px;
+    color: #6D6D6D;
+    width: 491px;
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.home .text_home p span {
+    color: #0093DE;
+    font: normal normal normal 18px/25px GothamBold;
+}
+
+.home .text_home .btn-static {
+    margin-top: 50px;
+    box-shadow: 10px 10px 35px #0093DE80;
+}
+
+/*-----------------------------------------------------------------------------------
+
+about CSS
+
+-----------------------------------------------------------------------------------*/
+
+.about .payment {
+    background-color: #fff;
+    width: 635px;
+    padding: 35px 0;
+    padding-left: 0;
+    clip-path: polygon(95% 0%, 108% 100%, 72% 100%, 0 100%, 0 0);
+}
+
+.payment .logo_img ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment .logo_img ul li {
+    width: 15%;
+    margin: 0 25px;
+}
+
+
+.about .aboutContainer {
+    background-color: #fff;
+    max-width: 1780px;
+    border-radius: 0% 90px 90px 0;
+}
+
+.about .about_img {
+    position: relative;
+    width: 505px;
+    margin-left: 20px;
+}
+
+.about .about_img p {
+    font: italic normal normal 14px/24px Gotham;
+    letter-spacing: 0px;
+    width: 438px;
+    margin-top: 25px;
+}
+
+.about .about_text {
+    padding-left: 50px;
+    margin-top: 112px;
+    width: 867px;
+}
+
+.about .about_text p {
+    font: normal normal normal 20px/32px Gotham;
+    letter-spacing: 0px;
+    color: #2A2A2A;
+}
+
+/*-----------------------------------------------------------------------------------
+
+Different CSS
+
+-----------------------------------------------------------------------------------*/
+.different {
+    padding: 170px 0;
+}
+
+.different .head_different p {
+    font: normal normal 400 16px/24px GothamBold;
+    letter-spacing: 0px;
+}
+
+.different .cards .colCard {
+    padding-right: 17px;
+}
+
+.different .card {
+    background: #f3fbff url('../img/icons/MaskGroup.png') 100% 100% no-repeat padding-box;
+    padding: 50px 30px 77px 30px;
+    border: none;
+    border-radius: 50px 25px;
+    margin-top: 41px;
+}
+
+.different .card .card-body {
+    padding: 0;
+}
+
+.different .card img {
+    max-width: 55px;
+}
+
+.different .card h6 {
+    font: normal normal bold 18px/24px GothamBold;
+    letter-spacing: 0px;
+    color: #0093DE !important;
+    margin: 15px 0;
+}
+
+.different .card p {
+    font: normal normal 400 14px/24px GothamBold;
+}
+
+.card img[alt="value"] {
+    width: 25px;
+    height: 40px;
+}
+
+/*-----------------------------------------------------------------------------------
+
+Our Scope CSS
+
+-----------------------------------------------------------------------------------*/
+.scope {
+    padding: 88px 0;
+    background: #fff url('../img/icons/shapes.svg') 50% 50% no-repeat padding-box;
+}
+
+.scope .card {
+    border: none;
+    border-radius: 50px 25px;
+    text-align: center;
+    padding: 30px 40px;
+    margin-top: 32px;
+    box-shadow: -10px 10px 50px #0093DE1A;
+    background: transparent linear-gradient(304deg, #FFFFFF 0%, #EFFAFF 100%) 0% 0% no-repeat padding-box;
+}
+
+.scope .card .card-body {
+    padding: 0;
+}
+
+.scope .card img {
+    max-width: 55px;
+}
+
+.scope .card.cardMid {
+    margin-top: 55px;
+}
+
+.scope .card h6 {
+    margin-top: 20px;
+    margin-bottom: 7px;
+    font: normal normal 400 16px/19px GothamBold;
+    letter-spacing: 0px;
+    color: #2A2A2A;
+}
+
+.scope .card p {
+    font: normal normal 200 14px/19px GothamBold;
+    letter-spacing: 0px;
+    color: #A2A2A2;
+}
+
+.scope .card .btn-static {
+    height: 50px;
+    width: 200px;
+    margin: auto;
+}
+
+/*-----------------------------------------------------------------------------------
+
+articles CSS
+
+-----------------------------------------------------------------------------------*/
+.articles {
+    padding: 170px 0;
+    background: #F0F6FF 0% 0% no-repeat padding-box;
+}
+
+.articles .head_different {
+    margin-bottom: 55px;
+}
+
+.articles .card {
+    background: transparent linear-gradient(334deg, #FFFFFF 0%, #EFFAFF 100%) 0% 0% no-repeat padding-box;
+    border: none;
+    box-shadow: 0px 20px 50px #0093DE17;
+    border-radius: 25px;
+
+}
+
+.articles .card .title {
+    font: normal normal 200 12px/21px Gotham;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    background: #FF6B7E 0% 0% no-repeat padding-box;
+    text-transform: uppercase;
+    border-radius: 8px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    padding: 5px 10px;
+}
+
+.articles .card .card-body {
+    padding: 30px 40px;
+}
+
+.owl-item>div {
+    cursor: pointer;
+    transition: margin 0.4s ease;
+}
+
+.owl-item.center>div {
+    cursor: auto;
+    margin: 0;
+}
+
+.owl-item:not(.center)>div {
+    opacity: .5;
+}
+
+.owl-item:not(.center)>div:hover {
+    opacity: 1;
+}
+
+.articles .card .card-body .date {
+    font: normal normal normal 12px/24px Gotham;
+    letter-spacing: 0px;
+    color: #A2A2A2;
+    margin-bottom: 5px;
+}
+
+.articles .card .card-body h5 {
+    font: normal normal 300 23px/25px GothamBold;
+    letter-spacing: 0px;
+    color: #2A2A2A;
+}
+
+.articles .card .card-text {
+    font: normal normal normal 15px/17px Gotham;
+    letter-spacing: 0px;
+    color: #A2A2A2;
+    margin-bottom: 20px;
+}
+
+.articles .card .footer_text p {
+    margin-bottom: -5px;
+    font: normal normal normal 12px/24px Gotham;
+    letter-spacing: 0px;
+}
+
+.articles .card .footer_text h6 {
+    font: normal normal 400 12px/24px GothamBold;
+}
+
+.articles .card .footer_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.articles .card .footer_link a {
+    font: normal normal normal 14px/24px Gotham;
+    letter-spacing: 0px;
+    color: #027AB7;
+}
+
+/*-----------------------------------------------------------------------------------
+
+newsletterContainer CSS
+
+-----------------------------------------------------------------------------------*/
+.newsletter {
+    background-color: #fff;
+}
+
+.newsletterContainer {
+    width: 1364px;
+    margin: auto;
+    padding: 55px 220px;
+    background: #F0F6FF url('../img/icons/shapes.png') 100% 100% no-repeat padding-box;
+    box-shadow: 10px -10px 50px #0093DE17;
+    position: relative;
+    bottom: 80px;
+}
+
+.newsletterContainer .text_newsletter h3 {
+    font: normal normal bold 18px/20px GothamBold;
+    letter-spacing: 0px;
+    color: #000000DE;
+}
+
+.newsletterContainer .form_newsletter input {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border-radius: 99px;
+    height: 73px;
+    font: normal normal normal 20px/21px Gotham;
+    letter-spacing: -0.2px;
+    color: #ACACAC;
+    border: none;
+}
+
+.newsletterContainer .form_newsletter form {
+    position: relative;
+}
+
+.newsletterContainer .form_newsletter .btn-static {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+
+}
+
+/*-----------------------------------------------------------------------------------
+
+footer CSS
+
+-----------------------------------------------------------------------------------*/
+.footer {
+
+    background-color: #fff;
+}
+
+.footer .container {
+    max-width: 1200px;
+}
+
+.footer .info img {
+    max-width: 130px;
+}
+
+.footer .info p {
+    font: normal normal 300 14px/18px Gotham;
+    letter-spacing: -0.28px;
+    color: #2A2A2A;
+    margin-top: 22px;
+    margin-bottom: 40px;
+    width: 208px;
+}
+
+.footer .info p a {
+    color: #027AB7;
+    margin-left: 8px;
+}
+
+.footer .info ul {
+    display: flex;
+    width: 160px;
+}
+
+.footer .info ul li {
+    margin-right: 10px;
+    width: 24px;
+}
+
+.footer .info ul li a {
+    color: #5A5A5A;
+    border: 1px solid #5A5A5A;
+    padding: 5px 7px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: all .5s;
+}
+
+.footer .info ul li a:hover {
+    color: #fff !important;
+    border: 1px solid #0093DE;
+    background-color: #0093DE;
+}
+
+.footer .about_info h2 {
+    font: normal normal 300 18px/24px GothamBold;
+    letter-spacing: 0px;
+    color: #2A2A2A;
+    margin-bottom: 22px;
+}
+
+.footer .about_info ul li:first-child {
+    margin-top: 0;
+}
+
+.footer .about_info ul li {
+    margin-bottom: 5px;
+}
+
+.footer .about_info ul li a {
+    font: normal normal 400 14px/24px Gotham;
+    letter-spacing: 0px;
+    color: #2A2A2A;
+}
+
+.footer .contact_info ul li a i {
+    margin-right: 7px;
+    color: #5A5A5A;
+
+}
+
+.footer .footer_bottom {
+    border-top: 1px solid #cdcdcd69;
+    padding: 30px 0;
+    margin-top: 70px;
+}
+.footer_bottom .copy p {
+    font: normal normal 300 16px/18px Gotham;
+    letter-spacing: 0px;
+}
+.footer_bottom .terms ul li {
+    margin-right: 12px;
+}
+.footer_bottom .terms ul li a {
+    color: #656565;
+    text-decoration: underline;
+    font: normal normal 300 14px/24px Gotham;
+    letter-spacing: 0px;
+}
+

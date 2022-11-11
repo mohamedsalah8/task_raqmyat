@@ -1,0 +1,352 @@
+/*-----------------------------------------------------------------------------------
+
+Responsive CSS
+
+-----------------------------------------------------------------------------------*/
+
+@media handheld,
+only screen and (max-width: 1200px) {
+    .header-align-left .menu.table-cell {
+        width: auto;
+        padding-left: 50px;
+    }
+
+    .home {
+        height: 50vh;
+    }
+
+    .about .about_img,
+    .about .about_text {
+        width: auto;
+    }
+
+    .about .about_text {
+        margin-top: 0;
+    }
+
+    .newsletterContainer {
+        width: 100%;
+        margin: auto;
+        padding: 40px 0;
+    }
+
+}
+
+@media handheld,
+only screen and (max-width: 1100px) {
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+
+        text-align: left;
+    }
+
+    .header .table-cell:first-child {
+        width: 405px;
+    }
+
+    .container {
+        padding: 0 60px !important;
+    }
+
+    .home .text_home h1 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .home .text_home p {
+        width: 100%;
+    }
+
+    .home .text_home h1 .revenues {
+        padding: 40px 0;
+        background: transparent url(../img/line.png) 100% 0% no-repeat padding-box;
+    }
+
+    .mobile-ic {
+        right: 36px;
+        top: 8px;
+    }
+}
+
+@media handheld,
+only screen and (max-width: 991px) {
+    .header .table-cell {
+        display: none;
+    }
+
+    .mobile-ic {
+        display: block;
+    }
+
+    .header-align-left .table-cell {
+        display: none;
+    }
+
+    .header-align-left .table-cell.logo {
+        display: block;
+        margin: 0;
+    }
+
+    .logo {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .logo.table-cell>a {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .img_home {
+        display: none;
+    }
+
+    .home .container {
+        padding: 0 8px !important;
+    }
+
+    .home .text_home h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .home .text_home p {
+        width: 100%;
+    }
+
+    /*--responsive menu css--*/
+    .responsive-menu {
+        top: 77px;
+    }
+    .header .responsive-menu ul li {
+    margin-top: 20px;
+    }
+    .header .responsive-menu ul li a {
+        color: #fff;
+    }
+    .menu {
+        position: absolute;
+        top: 125px;
+        display: none;
+        background: #027AB7;
+        padding: 15px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    .menu ul li {
+        border-top: 1px solid rgba(46, 42, 38, 0.35);
+        display: block;
+        margin-top: 7px;
+        padding-left: 0;
+        padding-top: 7px;
+    }
+
+    .menu ul li a:hover,
+    .menu ul li.active a {
+        color: #2e2a26;
+    }
+
+    .menu ul li:first-child {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    .header-align-left .menu.table-cell {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .logo img {
+        max-width: 250px;
+    }
+
+    .img_home {
+        display: block;
+    }
+
+    .home {
+        height: 65vh;
+    }
+
+    .home .container {
+        padding: 0 60px !important;
+    }
+
+    .home .text_home h1 {
+        font-size: 33px;
+        line-height: 50px;
+    }
+
+    .home .text_home p {
+        width: 100%;
+    }
+
+    .home .text_home h1 .revenues {
+        padding: 40px 0;
+        background: transparent url(../img/line.png) 100% 0% no-repeat padding-box;
+    }
+
+    .mobile-ic {
+        right: 36px;
+        top: 8px;
+    }
+
+    .slider-header .header,
+    .header {
+        /* padding-top: 11px; */
+        flex-direction: row-reverse;
+        padding: 11px 15px;
+    }
+
+    .logo a img {
+        max-width: 200px;
+    }
+
+    .about .payment {
+        width: 100%;
+        padding: 35px 35px;
+        padding-left: 35px;
+    }
+
+    .about .aboutContainer {
+        max-width: 100%;
+    }
+
+    .about .about_img {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .about .about_img p {
+        width: 100%;
+    }
+
+    .about .about_text {
+        padding-left: 0px;
+        width: 100%;
+        margin-top: 0;
+    }
+    .different {
+        padding: 80px 0;
+    }
+    .articles {
+        padding: 125px 0;
+    }
+    .footer .info p {
+        width: 100%;
+    }
+    .footer .about_info {
+        margin-top: 20px;
+    }
+
+}
+
+@media handheld,
+only screen and (max-width: 767px) {
+
+    .slider-header .header,
+    .header {
+        /* padding-top: 11px; */
+        flex-direction: row-reverse;
+        padding: 11px 15px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .img_home {
+        display: none;
+    }
+
+    .logo.table-cell>a {
+        text-align: left;
+    }
+
+    .slider-header .logo img,
+    .logo img {
+        max-width: 160px !important;
+    }
+
+    .slider-header .mobile-ic,
+    .mobile-ic {
+        top: 19px;
+        right: 25px;
+    }
+
+    .menu {
+        top: 74px;
+    }
+
+    .responsive-menu {
+        top: 77px;
+    }
+
+    .home .container {
+        padding: 0 15px !important;
+    }
+
+    .home .text_home h1 {
+        font-size: 33px;
+        line-height: 50px;
+    }
+
+    .home .text_home p {
+        width: 100%;
+    }
+
+    .home .text_home h1 .revenues {
+        padding: 40px 0;
+        background: transparent url(../img/line.png) 100% 0% no-repeat padding-box;
+    }
+
+    .mobile-ic {
+        right: 36px;
+        top: 8px;
+    }
+
+
+}
+
+@media handheld,
+only screen and (max-width:600px) {
+    .slider-header .container {
+        padding: 0 15px !important;
+       
+    }
+    .home {
+        height: 100vh;
+    }
+
+    .about .container {
+        padding: 0 15px !important;
+    }
+
+    .about .payment {
+        clip-path: none;
+        padding: 16px 16px;
+        padding-left: 16px;
+    }
+
+    .payment .logo_img ul li {
+        margin: 0;
+
+    }
+    .newsletterContainer .container {
+        padding: 0 15px !important;
+    }
+}
