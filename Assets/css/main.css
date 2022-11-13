@@ -74,36 +74,33 @@ a {
 a:hover {
     color: #0093DE !important;
 }
-
 .btn-static {
     color: #FFFFFF !important;
     font: normal normal normal 19px/20px Gotham;
     padding: 15px 24px;
-    background: transparent linear-gradient(252deg,
-            #0093DE 0%, #3C6FAE 88%, #EF0220 150%) 0% 0% no-repeat padding-box;
+    background:   linear-gradient(252deg,
+            #0093DE 0%, #3C6FAE 88%, #EF0220 150%)  ;
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: background 1s;
 }
-
-.btn-static span {
-    margin-left: 10px;
-    font-size: 16px;
+.btn-static:hover {
+    background:     linear-gradient(252deg, #0093DE 7%, #3C6FAE 44%, #EF0220 97%)  ;
+    color: #FFFFFF !important;
 }
-
 .container {
     max-width: 1640px;
 }
-
 .container-md {
     max-width: 1120px;
 }
-
 p {
     margin-bottom: 0;
 }
-
 h2 {
     color: #000;
     font: normal normal bold 45px/50px GothamBlak;
@@ -112,7 +109,6 @@ h2 {
     position: relative;
     z-index: 1;
 }
-
 h2 span {
     background: transparent url('../img/lines/Line1.png') 100% 100% no-repeat padding-box;
     z-index: -1;
