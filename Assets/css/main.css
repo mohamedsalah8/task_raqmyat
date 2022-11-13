@@ -92,6 +92,10 @@ a:hover {
     background:     linear-gradient(252deg, #0093DE 7%, #3C6FAE 44%, #EF0220 97%)  ;
     color: #FFFFFF !important;
 }
+.btn-static span {
+    margin-left: 10px;
+    font-size: 16px;
+}
 .container {
     max-width: 1640px;
 }
